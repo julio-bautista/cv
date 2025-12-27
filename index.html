@@ -4,48 +4,60 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=1100, initial-scale=1" />
   <title>Julio Bautista — Estrategia Digital y Política</title>
-  <style>
-    :root{
-      --azul:#1e3a8a;
-      --azul-claro:#2563eb;
-      --gris-borde:#b0c4de;
+  <style>:root{
+      --azul:#34354f;
+      --azul-claro:#818293;
+      --gris-borde:#cdcacb;
+      --fondo:#e8e9eb;
+      --blanco:#ffffff;
     }
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#fff;color:#0a0a0a}
-    .page{max-width:1100px;margin:auto;background:#fff;border-radius:0;box-shadow:none;overflow:hidden;border:1px solid var(--gris-borde)}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--fondo);color:#0a0a0a}
+    .page{max-width:1100px;margin:auto;background:var(--blanco);border-radius:0;box-shadow:none;overflow:hidden;border:1px solid var(--gris-borde)}
 
-    .topband{background:#fff;color:var(--azul);border-bottom:2px solid var(--gris-borde);padding:24px 24px 0 24px}
-    .headgrid{display:grid;grid-template-columns:280px 1fr;align-items:end;padding:12px 8px 24px 8px;border-bottom:1px solid var(--gris-borde)}
-    .signature{font-size:56px;font-family:"Segoe Script","Pacifico",cursive;color:var(--azul)}
-    .lastname{font-size:28px;letter-spacing:.35em;text-transform:uppercase;margin-top:6px;color:var(--azul-claro)}
-    .tagline{text-align:right;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--azul)}
-
-    .wrap{display:grid;grid-template-columns:320px 1fr;gap:0}
-
-    .sidebar{background:#fff;color:#000;padding:32px 28px;display:flex;flex-direction:column;align-items:center;gap:28px;border-right:2px solid var(--gris-borde)}
-    .photo{width:220px;height:220px;border-radius:18px;overflow:hidden;border:2px solid var(--azul-claro);display:flex;align-items:center;justify-content:center;margin-bottom:10px}
-    .photo img{width:100%;height:100%;object-fit:cover;object-position:center}
-
+        .signature{
+      font-size:56px;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      font-weight:700;
+      letter-spacing:-0.01em;
+      line-height:1.0;
+      color:var(--azul);
+      margin:0;
+    }
+    .lastname{
+      font-size:26px;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      font-weight:700;
+      letter-spacing:.42em;
+      text-transform:uppercase;
+      margin-top:12px;
+      color:var(--azul);
+    }
+.sidebar{background:var(--azul);color:var(--blanco);padding:32px 28px;display:flex;flex-direction:column;align-items:center;gap:28px;border-right:2px solid var(--gris-borde)}
     .block{width:100%;border-bottom:1px solid var(--gris-borde);padding-bottom:12px;margin-bottom:12px}
-    .block h2{font-size:14px;text-transform:uppercase;letter-spacing:.3em;margin:0 0 12px;color:var(--azul);text-align:center;border-bottom:1px solid var(--azul-claro);padding-bottom:6px}
+    .block h2{font-size:14px;text-transform:uppercase;letter-spacing:.3em;margin:0 0 12px;color:var(--blanco);text-align:center;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:6px}
     .block h3{font-size:13px;text-transform:uppercase;letter-spacing:.22em;margin:0 0 10px;color:var(--azul-claro)}
     .kv{display:grid;gap:8px}
-    .item{display:flex;align-items:center;gap:10px;color:#0a0a0a}
+    .item{display:flex;align-items:center;gap:10px;color:var(--blanco)}
 
     .lang-meter{display:grid;gap:8px}
-    .meter{height:10px;border-radius:999px;background:#e0e7ff;overflow:hidden;border:1px solid var(--azul-claro)}
-    .meter>span{display:block;height:100%;background:var(--azul-claro)}
+    .meter{height:10px;border-radius:999px;background:rgba(255,255,255,.25);overflow:hidden;border:1px solid rgba(255,255,255,.35)}
+    .meter>span{display:block;height:100%;background:var(--blanco)}
 
     .body{padding:36px 40px;display:block}
-    .xp-item{border:1px solid var(--azul-claro);border-radius:10px;padding:16px;background:#fff;box-sizing:border-box;margin-bottom:20px}
+    .xp-item{border:1px solid var(--gris-borde);border-radius:10px;padding:16px;background:#fff;box-sizing:border-box;margin-bottom:20px}
     .xp-item h3{margin-top:0;color:var(--azul);border-bottom:1px solid var(--gris-borde);padding-bottom:6px}
 
     a{color:var(--azul-claro);text-decoration:none}
     a:hover{text-decoration:underline;color:var(--azul)}
 
+    .sidebar a{color:var(--fondo)}
+    .sidebar a:hover{color:var(--blanco);text-decoration:underline}
+
+
 
     /* Explora herramientas IA: tarjetas con imágenes (solo esta sección) */
     .ia-links-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:14px}
-    .ia-card{position:relative;display:block;border:1px solid var(--azul-claro);border-radius:14px;overflow:hidden;background:#fff;text-decoration:none}
+    .ia-card{position:relative;display:block;border:1px solid var(--gris-borde);border-radius:14px;overflow:hidden;background:#fff;text-decoration:none}
     .ia-card:hover{transform:translateY(-2px);box-shadow:0 10px 18px rgba(0,0,0,.12)}
     .ia-img{display:block;aspect-ratio:1/1;background:#fff}
     .ia-img img{width:100%;height:100%;object-fit:contain;display:block}
@@ -63,24 +75,146 @@
       html, body{ background:#fff; color:#000; -webkit-print-color-adjust:exact; print-color-adjust:exact }
       .page{box-shadow:none;border:none}
     }
-  </style>
+
+    /* --- Layout tipo CV (como referencia) --- */
+    .cv{
+      display:grid;
+      grid-template-columns:320px 1fr;
+      grid-template-rows:auto auto 1fr;
+      grid-template-areas:
+        "photo name"
+        "band band"
+        "side main";
+      gap:0;
+    }
+
+    .photohead{
+      grid-area:photo;
+      background:var(--azul);
+      border-right:2px solid var(--gris-borde);
+      height:330px;
+      overflow:hidden;
+    }
+    .photohead img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+      display:block;
+    }
+
+        .namehead{
+      grid-area:name;
+      background:var(--fondo);
+      color:var(--azul);
+      padding:28px 48px 22px 48px;
+      border-bottom:1px solid var(--gris-borde);
+      text-align:right;
+    }
+    .signature{
+      font-size:56px;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      font-weight:700;
+      letter-spacing:-0.01em;
+      line-height:1.0;
+      color:var(--azul);
+      margin:0;
+    }
+    .lastname{
+      font-size:26px;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      font-weight:700;
+      letter-spacing:.42em;
+      text-transform:uppercase;
+      margin-top:12px;
+      color:var(--azul);
+    }
+.titleband{
+      grid-area:band;
+      background:rgba(52,53,79,.22);
+      border-top:1px solid rgba(0,0,0,.08);
+      border-bottom:1px solid rgba(0,0,0,.10);
+      padding:18px 24px;
+      text-align:center;
+    }
+    .titletext{
+      color:var(--azul);
+      font-size:14px;
+      letter-spacing:.28em;
+      text-transform:uppercase;
+    }
+
+    .sidebar{
+      grid-area:side;
+      background:var(--azul);
+      color:var(--blanco);
+      padding:32px 28px 36px 28px;
+      border-right:2px solid var(--gris-borde);
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .body{
+      grid-area:main;
+      padding:36px 40px;
+      display:block;
+      background:var(--blanco);
+    }
+
+    /* Responsive: apila columnas */
+    @media (max-width: 900px){
+      .cv{
+        grid-template-columns:1fr;
+        grid-template-rows:auto auto auto auto auto;
+        grid-template-areas:
+          "name"
+          "photo"
+          "band"
+          "main"
+          "side";
+      }
+      .photohead{border-right:none;height:320px}
+      .sidebar{border-right:none}
+          .namehead{
+      grid-area:name;
+      background:var(--fondo);
+      color:var(--azul);
+      padding:28px 48px 22px 48px;
+      border-bottom:1px solid var(--gris-borde);
+      text-align:right;
+    }
+    .lastname{
+      font-size:26px;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      font-weight:700;
+      letter-spacing:.42em;
+      text-transform:uppercase;
+      margin-top:12px;
+      color:var(--azul);
+    }
+.titletext{letter-spacing:.18em}
+    }
+
+</style>
 </head>
 <body>
   <main class="page">
-    <header class="topband">
-      <div class="headgrid">
-        <div>
-          <div class="signature">Julio</div>
-          <div class="lastname">Bautista</div>
-        </div>
-        <div class="tagline">Marketing Digital y Estrategia Política</div>
+    <div class="cv">
+      <div class="photohead" aria-label="Fotografía de perfil">
+        <img src="foto-perfil.jpg" alt="Retrato de Julio Bautista">
       </div>
-    </header>
 
-    <div class="wrap">
+      <header class="namehead">
+        <div class="signature">Julio</div>
+        <div class="lastname">BAUTISTA</div>
+      </header>
+
+      <div class="titleband" role="heading" aria-level="1">
+        <div class="titletext">MARKETING DIGITAL Y ESTRATEGIA POLÍTICA</div>
+      </div>
+
       <aside class="sidebar">
-        <figure class="photo"><img src="foto-perfil.jpg" alt="Retrato de Julio Bautista"></figure>
-
         <section class="block">
           <h2>Sobre mí</h2>
           <h3>Perfil</h3>
@@ -185,5 +319,6 @@
       </section>
     </div>
   </main>
+
 </body>
 </html>
